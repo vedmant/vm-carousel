@@ -33,9 +33,9 @@
          font-size: 18px;
       }
 
-      .vmcarousel{ padding: 10px 0; }
-      .vmcarousel img { transition: all 0.3s ease; }
-      .vmc_active img { transform: scale(1.2); }
+      .vmc-centered{ padding: 10px 0; }
+      .vmc-centered img { transition: all 0.3s ease; }
+      .vmc-centered .vmc_active img { transform: scale(1.2); }
    </style>
 
 </head>
@@ -69,7 +69,33 @@
 
    <h2>VM Carousel</h2>
 
-   <ul class="vmcarousel">
+   <h3>Centered mode, initial slide index: 2</h3>
+
+   <ul class="vmcarousel-centered vmc-centered">
+      <li><img src="images/1.jpg" alt="" width="200"></li>
+      <li><img src="images/2.jpg" alt="" width="200"></li>
+      <li><img src="images/3.jpg" alt="" width="200"></li>
+      <li><img src="images/4.jpg" alt="" width="200"></li>
+      <li><img src="images/5.jpg" alt="" width="200"></li>
+      <li><img src="images/6.jpg" alt="" width="200"></li>
+   </ul>
+
+
+   <h3>Centered infinite mode, initial slide index: 1</h3>
+
+   <ul class="vmcarousel-centered-infitine vmc-centered">
+      <li><img src="images/1.jpg" alt="" width="200"></li>
+      <li><img src="images/2.jpg" alt="" width="200"></li>
+      <li><img src="images/3.jpg" alt="" width="200"></li>
+      <li><img src="images/4.jpg" alt="" width="200"></li>
+      <li><img src="images/5.jpg" alt="" width="200"></li>
+      <li><img src="images/6.jpg" alt="" width="200"></li>
+   </ul>
+
+
+   <h3>Normal mode</h3>
+
+   <ul class="vmcarousel-normal">
       <li><img src="images/1.jpg" alt="" width="200"></li>
       <li><img src="images/2.jpg" alt="" width="200"></li>
       <li><img src="images/3.jpg" alt="" width="200"></li>
@@ -96,12 +122,23 @@
 <script src="dist/jquery.vm-carousel.js"></script>
 <script>
    jQuery(function($){
-      $('.vmcarousel').vmcarousel({
+      $('.vmcarousel-centered').vmcarousel({
          centered: true,
-         dont_cut: true,
-         items_to_show: 5,
          start_item: 2,
-         start_item_centered: true,
+         autoplay: false,
+         infinite: false
+      });
+
+      $('.vmcarousel-centered-infitine').vmcarousel({
+         centered: true,
+         start_item: 1,
+         autoplay: false,
+         infinite: true
+      });
+
+      $('.vmcarousel-normal').vmcarousel({
+         centered: false,
+         start_item: 0,
          autoplay: false,
          infinite: false
       });
