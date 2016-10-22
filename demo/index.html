@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <title>VM carousel demo</title>
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <!-- Optional theme -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+         integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+   <link rel="stylesheet" type="text/css" href="../src/jquery.vm-carousel.css">
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+   <style>
+      body {
+         margin: 70px 0;
+      }
+
+      h2 {
+         margin-bottom: 40px;
+         margin-top: 40px;
+      }
+
+      .nav i.fa {
+         font-size: 18px;
+      }
+
+      .vmcarousel{ padding: 10px 0; }
+      .vmcarousel img { transition: all 0.3s ease; }
+      .vmc_active img { transform: scale(1.2); }
+   </style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+   <div class="container">
+      <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-1"
+                 aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="#">VM Carousel</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-navbar-1">
+         <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/vedmant/vm-carousel/zipball/master"><i
+               class="glyphicon glyphicon-download-alt"></i> Download zip</a></li>
+            <li><a href="https://github.com/vedmant/vm-carousel/tarball/master"><i
+               class="glyphicon glyphicon-download-alt"></i> Download tar.gz</a></li>
+            <li><a href="https://github.com/vedmant/vm-carousel"><i class="fa fa-github"></i> GitHub</a></li>
+         </ul>
+      </div>
+   </div>
+</nav>
+
+<div class="container">
+
+   <h2>VM Carousel</h2>
+
+   <ul class="vmcarousel">
+      <li><img src="images/1.jpg" alt="" width="200"></li>
+      <li><img src="images/2.jpg" alt="" width="200"></li>
+      <li><img src="images/3.jpg" alt="" width="200"></li>
+      <li><img src="images/4.jpg" alt="" width="200"></li>
+      <li><img src="images/5.jpg" alt="" width="200"></li>
+      <li><img src="images/6.jpg" alt="" width="200"></li>
+   </ul>
+
+   <h2>How to use</h2>
+
+   <pre>
+
+   </pre>
+
+   <h2>Full options list (default values)</h2>
+
+   <pre>
+   </pre>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="../src/jquery.vm-carousel.js"></script>
+<script>
+   jQuery(function($){
+      $('.vmcarousel').vmcarousel({
+         centered: true,
+         dont_cut: true,
+         items_to_show: 5,
+         start_item: 2,
+         start_item_centered: true,
+         autoplay: false,
+         infinite: false
+      });
+   });
+</script>
+</body>
+</html>
